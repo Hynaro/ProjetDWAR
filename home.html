@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="toolate">
+  
+  <head>
+    <meta charset="utf-8" />
+    <title>Toolate</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.3.x" src="https://code.angularjs.org/1.3.14/angular.js" data-semver="1.3.14"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="donnees.js"></script>
+  </head>
+  			<header id="header" class="alt">
+				<h1><strong><a href="index.html">Too late to apologize</a></strong> by MIAGE</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="home.html">My page</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+  <body ng-controller="Controller">
+    
+    <h1>Welcome "user"!</h1>
+    
+    <h3>You are the "rank" looser of this month ! </h3>
+    <H3> Congradulation !!!</H3>
+    
+   Your interests : 
+    <form name="centerOfInterest">
+      <label>Concert :
+        <input type="checkbox" ng-model="checkboxModel.concert">
+      </label><br/>
+      <label>Cinema :
+        <input type="checkbox" ng-model="checkboxModel.cinema">
+     </label><br/>
+     <label>Theatre :
+        <input type="checkbox" ng-model="checkboxModel.theatre">
+     </label><br/>
+     <label>Spectacle :
+        <input type="checkbox" ng-model="checkboxModel.spectacle">
+      </label><br/>
+      <label>Exposition :
+        <input type="checkbox" ng-model="checkboxModel.exposition">
+     </label><br/>
+     <label>Musée :
+        <input type="checkbox" ng-model="checkboxModel.musee">
+     </label><br/>
+     <label>Visite :
+        <input type="checkbox" ng-model="checkboxModel.visite">
+     </label><br/>
+     <label>Projection :
+        <input type="checkbox" ng-model="checkboxModel.projection">
+     </label><br/>
+     <label>Film :
+        <input type="checkbox" ng-model="checkboxModel.film">
+     </label><br/>
+     
+    <!--  
+      film, Vidéo, multimédia, conférence et débat, festival, livre, lecture, 
+      marché, brocante, vide-grenier, Portes ouvertes, forum, animations, 
+      animation jeunesse, danse de salon, bal
+    --> 
+   </form>
+
+
+    
+    
+    
+     <br/> 
+    <button onclick="window.location.href='home.html'">Bouton temporaire HOME (Romain)</button>
+    <br/><br/>
+    
+    <tt>Concert = {{checkboxModel.concert}}</tt><br/>
+    <tt>Cinema = {{checkboxModel.cinema}}</tt><br/>
+    <tt>Cinema = {{checkboxModel.theatre}}</tt><br/>
+    <tt>Spectacle = {{checkboxModel.spectacle}}</tt><br/>
+    <tt>Exposition = {{checkboxModel.exposition}}</tt><br/>
+    <tt>Musée = {{checkboxModel.musee}}</tt><br/>
+    <tt>Visite = {{checkboxModel.visite}}</tt><br/>
+    <tt>Projection = {{checkboxModel.projection}}</tt><br/>
+    <tt>Film = {{checkboxModel.film}}</tt><br/>
+
+  </body>
+      
+    <script>
+      angular.module('toolate', []).controller('Controller', ['$scope', function($scope) {
+      $scope.checkboxModel = {
+       concert : false,
+       cinema : false,
+       theatre : false,
+       spectacle : false,
+       exposition : false,
+       musee : false,
+       visite : false,
+       projection : false,
+       film : false,
+       };
+      }]);
+    </script>
+
+</html>
